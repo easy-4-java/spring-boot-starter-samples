@@ -1,4 +1,4 @@
-package io.github.hiwepy.websocket.config;
+package io.github.easy4j.websocket.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -7,9 +7,9 @@ import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 
-import io.github.hiwepy.websocket.handler.BroadcastWebSocketsHandler;
-import io.github.hiwepy.websocket.handler.MessageEventWebSocketHandler;
-import io.github.hiwepy.websocket.interceptor.HandshakeSessionInterceptor;
+import io.github.easy4j.websocket.handler.BroadcastWebSocketsHandler;
+import io.github.easy4j.websocket.handler.MessageEventWebSocketHandler;
+import io.github.easy4j.websocket.interceptor.HandshakeSessionInterceptor;
 
 @Configuration
 @EnableWebSocket

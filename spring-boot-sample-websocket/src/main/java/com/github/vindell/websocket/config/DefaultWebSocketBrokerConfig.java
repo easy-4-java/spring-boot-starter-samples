@@ -1,4 +1,4 @@
-package io.github.hiwepy.websocket.config;
+package io.github.easy4j.websocket.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

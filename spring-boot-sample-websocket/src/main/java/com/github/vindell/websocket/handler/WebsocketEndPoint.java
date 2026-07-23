@@ -1,4 +1,4 @@
-package io.github.hiwepy.websocket.handler;  
+package io.github.easy4j.websocket.handler;  
   
 import org.springframework.web.socket.TextMessage;  
 import org.springframework.web.socket.WebSocketSession;  
