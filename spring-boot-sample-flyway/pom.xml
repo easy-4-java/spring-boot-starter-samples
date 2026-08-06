@@ -41,7 +41,7 @@
         <dependency>
             <groupId>com.ruijc</groupId>
             <artifactId>spring-boot-starter-mybatis</artifactId>
-            <version>3.2.2</version>
+            <version>${spring-boot-starter-mybatis.version}</version>
         </dependency>
         
         <!-- <dependency>
@@ -87,6 +87,17 @@
         </dependency>
 
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ruijc</groupId>
+                <artifactId>spring-boot-starter-mybatis</artifactId>
+                <version>${spring-boot-starter-mybatis.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
 

@@ -42,7 +42,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>${spring-boot-starter-websocket.version}</version>
         </dependency>
         
         <!-- https://mvnrepository.com/artifact/org.webjars.bower/stomp-websocket -->
@@ -57,6 +57,17 @@
         </dependency>
 
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+                <version>${spring-boot-starter-websocket.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
 
