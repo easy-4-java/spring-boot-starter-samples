@@ -4,72 +4,72 @@
 
 # spring-boot-starter-samples
 
-**Spring Boot Starter for cxf-rt-javassist**
+**Spring Boot Starter，集成 cxf-rt-javassist**
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.easy4j/spring-boot-starter-samples)](https://github.com/easy-4-java/spring-boot-starter-samples)
-[![Java](https://img.shields.io/badge/Java-17-orange)](#3-requirements-and-compatibility)
+[![Java](https://img.shields.io/badge/Java-17-orange)](#3-运行要求与兼容性)
 [![License](https://img.shields.io/badge/license-Apache-2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
 
-[简体中文](./README.zh-CN.md) | [English](./README.md)
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-[Positioning](#1-positioning) · [Capabilities](#2-core-capabilities) ·
-[Dependency](#5-dependency) · [Quick Start](#6-quick-start) ·
-[Configuration](#7-configuration-reference) · [Versions](#9-version-lines-and-compatibility) ·
-[Build](#10-build-and-test) · [License](#12-license)
+[项目定位](#1-项目定位) · [核心能力](#2-核心能力) ·
+[引入依赖](#5-引入依赖) · [快速开始](#6-快速开始) ·
+[配置参考](#7-配置参考) · [版本线](#8-版本线与兼容性) ·
+[构建测试](#9-构建与测试) · [许可证](#12-许可证)
 
 </div>
 
 ---
 
-> **Current Version**：`1.0.0-SNAPSHOT`<br>
-> **JDK Baseline**：`17`<br>
+> **当前版本**：`1.0.0-SNAPSHOT`<br>
+> **JDK 基线**：`17`<br>
 > **Group ID**：`io.github.easy4j`<br>
 > **Artifact ID**：`spring-boot-starter-samples`<br>
-> **License**：Apache License 2.0<br>
+> **许可证**：Apache License 2.0<br>
 
-## 1. Positioning
+## 1. 项目定位
 
-**spring-boot-starter-samples** is a Spring Boot starter that integrates **cxf-rt-javassist** for applications using cxf-rt-javassist. It provides auto-configuration, property binding, and ready-to-use beans so that applications can consume cxf-rt-javassist capabilities with minimal setup.
+**spring-boot-starter-samples** 是一个面向 使用 cxf-rt-javassist 的应用 的 Spring Boot Starter，用于将 **cxf-rt-javassist** 集成到 Spring Boot 应用中。它提供自动装配、属性绑定与开箱即用的 Bean，使应用以最小配置即可使用 cxf-rt-javassist 的全部能力。
 
-| Dimension | Description |
+| 维度 | 说明 |
 |---|---|
-| Type | Spring Boot Starter |
-| Consumers | Spring Boot applications using cxf-rt-javassist |
-| Core Capabilities | auto-configuration, property binding, ready-to-use beans for cxf-rt-javassist |
+| 类型 | Spring Boot Starter |
+| 消费方 | 使用 cxf-rt-javassist 的 Spring Boot 应用 |
+| 核心能力 | 自动装配、属性绑定、开箱即用的 cxf-rt-javassist Bean |
 | JDK | `17` |
-| Coordinates | `io.github.easy4j:spring-boot-starter-samples:1.0.0-SNAPSHOT` |
-| Config Prefix | `spring.boot.samples` |
+| 坐标 | `io.github.easy4j:spring-boot-starter-samples:1.0.0-SNAPSHOT` |
+| 配置前缀 | `spring.boot.samples` |
 
-## 2. Core Capabilities
+## 2. 核心能力
 
-| Capability | Status | Description |
+| 能力 | 状态 | 说明 |
 |---|:---:|---|
-| Auto-configuration | ✅ Stable | Registers cxf-rt-javassist beans automatically |
-| Property Binding | ✅ Stable | Binds `spring.boot.samples.*` to `Properties` |
-| Ready-to-use beans | ✅ Stable | Auto-registered via auto-configuration |
+| 自动装配 | ✅ 稳定 | 自动注册 cxf-rt-javassist 相关 Bean |
+| 属性绑定 | ✅ 稳定 | 绑定 `spring.boot.samples.*` 到 `Properties` |
+| 开箱即用的 Bean | ✅ 稳定 | 通过 自动装配 自动注册 |
 
-## 3. Requirements and Compatibility
+## 3. 运行要求与兼容性
 
-| Dependency | Minimum | Evidence |
+| 依赖 | 最低版本 | 证据来源 |
 |---|---:|---|
 | JDK | `17` | `pom.xml` |
 | Spring Boot | `3.3.3` | `pom.xml` parent |
 | Maven | `3.6+` | Maven Enforcer |
 
-## 4. Auto-configuration
+## 4. 自动装配
 
-The starter auto-configures the following beans:
+Starter 自动装配以下 Bean：
 
-| Bean | Condition | Missing Behavior |
+| Bean | 条件 | 缺失时行为 |
 |---|---|---|
-| `Object` | classpath + property | not created |
+| `Object` | classpath + property | 不创建 |
 
-Auto-configuration registration:
+自动装配注册：
 
-- `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` (Spring Boot 2.7+ / 3.x / 4.x)
-- `META-INF/spring.factories` (Spring Boot 2.x legacy)
+- `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`（Spring Boot 2.7+ / 3.x / 4.x）
+- `META-INF/spring.factories`（Spring Boot 2.x 传统方式）
 
-## 5. Dependency
+## 5. 引入依赖
 
 ```xml
 <dependency>
@@ -79,7 +79,7 @@ Auto-configuration registration:
 </dependency>
 ```
 
-This starter depends on the following components (managed by ddd4j BOM):
+本 Starter 依赖以下组件（版本由 ddd4j BOM 统一管理）：
 
 ```xml
 <dependency>
@@ -484,20 +484,20 @@ This starter depends on the following components (managed by ddd4j BOM):
 </dependency>
 ```
 
-## 6. Quick Start
+## 6. 快速开始
 
-### 6.1 Add dependency
+### 6.1 引入依赖
 
-Add the dependency above to your `pom.xml`.
+在 `pom.xml` 中添加上述依赖。
 
-### 6.2 Configure
+### 6.2 配置
 
 ```yaml
 spring.boot.samples:
   enabled: true
 ```
 
-### 6.3 Use the bean
+### 6.3 使用 Bean
 
 ```java
 @SpringBootApplication
@@ -508,64 +508,64 @@ public class Application {
 }
 ```
 
-Then inject the auto-configured bean in your code:
+在业务代码中注入自动装配的 Bean：
 
 ```java
 @Autowired
 private Object bean;
 ```
 
-## 7. Configuration Reference
+## 7. 配置参考
 
-### 7.1 Config Prefix
+### 7.1 配置前缀
 
 `spring.boot.samples`
 
-### 7.2 Configuration Items
+### 7.2 配置项
 
-| Property | Type | Default | Required | Description | Sensitive |
+| 属性 | 类型 | 默认值 | 必填 | 说明 | 敏感 |
 |---|---|---|:---:|---|:---:|
-| `spring.boot.samples.enabled` | boolean | `true` | No | Enable the starter | No |
-<!-- additional properties below -->
+| `spring.boot.samples.enabled` | boolean | `true` | 否 | 是否启用 Starter | 否 |
+<!-- 更多属性见下方 -->
 
-## 8. Version Lines and Compatibility
+## 8. 版本线与兼容性
 
-| Branch | JDK | Spring Boot | Component Version | Status |
+| 分支 | JDK | Spring Boot | 组件版本 | 状态 |
 |---|---:|---:|---|:---:|
-| `2.3.x` / `2.7.x` | `8+` | 2.3.x / 2.7.x | `1.0.x` | Maintenance |
-| `3.0.x` ~ `3.5.x` | `17` | 3.x | `2.0.x` | Maintenance |
-| `4.0.x` / `4.1.x` | `17+` | 4.x | `3.0.x` | Active |
+| `2.3.x` / `2.7.x` | `8+` | 2.3.x / 2.7.x | `1.0.x` | 维护中 |
+| `3.0.x` ~ `3.5.x` | `17` | 3.x | `2.0.x` | 维护中 |
+| `4.0.x` / `4.1.x` | `17+` | 4.x | `3.0.x` | 活跃开发 |
 
-## 9. Build and Test
+## 9. 构建与测试
 
 ```bash
 mvn clean verify
 mvn -pl spring-boot-starter-samples -am test
 ```
 
-## 10. Troubleshooting
+## 10. 排障
 
-| Symptom | Diagnosis | Resolution |
+| 症状 | 诊断 | 解决 |
 |---|---|---|
-| Bean not created | Check auto-configuration report | Verify `spring.boot.samples.enabled=true` and classpath |
-| `ClassNotFoundException` | Missing dependency | Add the required module |
-| Version conflict | `mvn dependency:tree` | Use BOM for version alignment |
+| Bean 未创建 | 查看自动装配报告 | 确认 `spring.boot.samples.enabled=true` 与 classpath |
+| `ClassNotFoundException` | 缺少依赖 | 引入对应模块 |
+| 版本冲突 | `mvn dependency:tree` | 使用 BOM 统一版本 |
 
-## 11. Contribution
+## 11. 贡献
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Run `mvn clean verify` before submitting.
-4. Submit a pull request.
+1. Fork 本仓库。
+2. 创建特性分支。
+3. 提交前运行 `mvn clean verify`。
+4. 提交 Pull Request。
 
-## 12. License
+## 12. 许可证
 
-This project is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+本项目采用 [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) 许可证。
 
 ---
 
 <div align="center">
 
-[Back to top](#readme-top) · [Issues](https://github.com/easy-4-java/spring-boot-starter-samples/issues) · [Repository](https://github.com/easy-4-java/spring-boot-starter-samples)
+[返回顶部](#readme-top) · [问题反馈](https://github.com/easy-4-java/spring-boot-starter-samples/issues) · [仓库地址](https://github.com/easy-4-java/spring-boot-starter-samples)
 
 </div>
