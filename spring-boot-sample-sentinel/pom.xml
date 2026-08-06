@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>spring-boot-starter-ahas-sentinel-client</artifactId>
-            <version>1.11.7</version>
+            <version>${spring-boot-starter-ahas-sentinel-client.version}</version>
         </dependency>
         <!-- For Spring Boot Web -->
         <dependency>
@@ -46,6 +46,17 @@
         </dependency>
 
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>spring-boot-starter-ahas-sentinel-client</artifactId>
+                <version>${spring-boot-starter-ahas-sentinel-client.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
 

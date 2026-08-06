@@ -14,6 +14,7 @@
     <properties>
 
         <spring-boot-starter-pf4j2.version>1.0.4.RELEASE</spring-boot-starter-pf4j2.version>
+        <pf4j2-plugin-api.version>2.0.x.20260630-SNAPSHOT</pf4j2-plugin-api.version>
     </properties>
     
     <dependencies>
@@ -59,12 +60,24 @@
         <dependency>
             <groupId>io.github.hiwepy</groupId>
             <artifactId>pf4j2-plugin-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${pf4j2-plugin-api.version}</version>
             <scope>system</scope>
             <systemPath>${basedir}/src/main/resources/pf4j2-plugin-api-1.0.0-SNAPSHOT.jar</systemPath>
         </dependency>
         
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.hiwepy</groupId>
+                <artifactId>pf4j2-plugin-api</artifactId>
+                <version>${pf4j2-plugin-api.version}</version>
+                <scope>system</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
 
