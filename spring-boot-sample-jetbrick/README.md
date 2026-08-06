@@ -2,11 +2,11 @@
 
 <div align="center">
 
-# spring-boot-starter-samples
+# spring-boot-sample-jetbrick
 
-**Spring Boot Starter for spring-boot-samples**
+**Spring Boot Starter for spring-boot-sample-jetbrick**
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.easy4j/spring-boot-starter-samples)](https://github.com/easy-4-java/spring-boot-starter-samples)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.easy4j/spring-boot-sample-jetbrick)](https://github.com/easy-4-java/spring-boot-sample-jetbrick)
 [![Java](https://img.shields.io/badge/Java-17-orange)](#3-requirements-and-compatibility)
 [![License](https://img.shields.io/badge/license-Apache-2.0-green)](https://www.apache.org/licenses/LICENSE-2.0)
 
@@ -21,31 +21,31 @@
 
 ---
 
-> **Current Version**：`1.0.0-SNAPSHOT`<br>
+> **Current Version**：`${jetbrick.version}`<br>
 > **JDK Baseline**：`17`<br>
 > **Group ID**：`io.github.easy4j`<br>
-> **Artifact ID**：`spring-boot-starter-samples`<br>
+> **Artifact ID**：`spring-boot-sample-jetbrick`<br>
 > **License**：Apache License 2.0<br>
 
 ## 1. Positioning
 
-**spring-boot-starter-samples** is a Spring Boot starter that integrates **spring-boot-samples** for applications using spring-boot-samples. It provides auto-configuration, property binding, and ready-to-use beans so that applications can consume spring-boot-samples capabilities with minimal setup.
+**spring-boot-sample-jetbrick** is a Spring Boot starter that integrates **spring-boot-sample-jetbrick** for applications using spring-boot-sample-jetbrick. It provides auto-configuration, property binding, and ready-to-use beans so that applications can consume spring-boot-sample-jetbrick capabilities with minimal setup.
 
 | Dimension | Description |
 |---|---|
 | Type | Spring Boot Starter |
-| Consumers | Spring Boot applications using spring-boot-samples |
-| Core Capabilities | auto-configuration, property binding, ready-to-use beans for spring-boot-samples |
+| Consumers | Spring Boot applications using spring-boot-sample-jetbrick |
+| Core Capabilities | auto-configuration, property binding, ready-to-use beans for spring-boot-sample-jetbrick |
 | JDK | `17` |
-| Coordinates | `io.github.easy4j:spring-boot-starter-samples:1.0.0-SNAPSHOT` |
-| Config Prefix | `spring.boot.samples` |
+| Coordinates | `io.github.easy4j:spring-boot-sample-jetbrick:${jetbrick.version}` |
+| Config Prefix | `spring.boot.sample.jetbrick` |
 
 ## 2. Core Capabilities
 
 | Capability | Status | Description |
 |---|:---:|---|
-| Auto-configuration | ✅ Stable | Registers spring-boot-samples beans automatically |
-| Property Binding | ✅ Stable | Binds `spring.boot.samples.*` to `Properties` |
+| Auto-configuration | ✅ Stable | Registers spring-boot-sample-jetbrick beans automatically |
+| Property Binding | ✅ Stable | Binds `spring.boot.sample.jetbrick.*` to `Properties` |
 | Ready-to-use beans | ✅ Stable | Auto-registered via auto-configuration |
 
 ## 3. Requirements and Compatibility
@@ -53,7 +53,7 @@
 | Dependency | Minimum | Evidence |
 |---|---:|---|
 | JDK | `17` | `pom.xml` |
-| Spring Boot | `1.0.2-SNAPSHOT` | `pom.xml` parent |
+| Spring Boot | `1.0.0-SNAPSHOT` | `pom.xml` parent |
 | Maven | `3.6+` | Maven Enforcer |
 
 ## 4. Auto-configuration
@@ -74,8 +74,8 @@ Auto-configuration registration:
 ```xml
 <dependency>
     <groupId>io.github.easy4j</groupId>
-    <artifactId>spring-boot-starter-samples</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>spring-boot-sample-jetbrick</artifactId>
+    <version>${jetbrick.version}</version>
 </dependency>
 ```
 
@@ -90,7 +90,7 @@ Add the dependency above to your `pom.xml`.
 ### 6.2 Configure
 
 ```yaml
-spring.boot.samples:
+spring.boot.sample.jetbrick:
   enabled: true
 ```
 
@@ -116,13 +116,13 @@ private Object bean;
 
 ### 7.1 Config Prefix
 
-`spring.boot.samples`
+`spring.boot.sample.jetbrick`
 
 ### 7.2 Configuration Items
 
 | Property | Type | Default | Required | Description | Sensitive |
 |---|---|---|:---:|---|:---:|
-| `spring.boot.samples.enabled` | boolean | `true` | No | Enable the starter | No |
+| `spring.boot.sample.jetbrick.enabled` | boolean | `true` | No | Enable the starter | No |
 <!-- additional properties below -->
 
 ## 8. Version Lines and Compatibility
@@ -137,14 +137,14 @@ private Object bean;
 
 ```bash
 mvn clean verify
-mvn -pl spring-boot-starter-samples -am test
+mvn -pl spring-boot-sample-jetbrick -am test
 ```
 
 ## 10. Troubleshooting
 
 | Symptom | Diagnosis | Resolution |
 |---|---|---|
-| Bean not created | Check auto-configuration report | Verify `spring.boot.samples.enabled=true` and classpath |
+| Bean not created | Check auto-configuration report | Verify `spring.boot.sample.jetbrick.enabled=true` and classpath |
 | `ClassNotFoundException` | Missing dependency | Add the required module |
 | Version conflict | `mvn dependency:tree` | Use BOM for version alignment |
 
@@ -163,6 +163,6 @@ This project is licensed under the [Apache License, Version 2.0](https://www.apa
 
 <div align="center">
 
-[Back to top](#readme-top) · [Issues](https://github.com/easy-4-java/spring-boot-starter-samples/issues) · [Repository](https://github.com/easy-4-java/spring-boot-starter-samples)
+[Back to top](#readme-top) · [Issues](https://github.com/easy-4-java/spring-boot-sample-jetbrick/issues) · [Repository](https://github.com/easy-4-java/spring-boot-sample-jetbrick)
 
 </div>
