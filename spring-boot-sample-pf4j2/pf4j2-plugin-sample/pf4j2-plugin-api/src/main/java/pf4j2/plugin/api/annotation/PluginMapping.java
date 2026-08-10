@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 /**
  * @className	： PluginMapping
  * @description	：插件注解：用于标记插件的信息
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @version 	V1.0
  */
 @Retention(RetentionPolicy.RUNTIME)

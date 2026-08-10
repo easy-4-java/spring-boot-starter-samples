@@ -31,7 +31,7 @@ import io.github.swagger2markup.markup.builder.MarkupLanguage;
 /**
  * TODO
  * 
- * @author ： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 //@RunWith(SpringRunner.class)
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)

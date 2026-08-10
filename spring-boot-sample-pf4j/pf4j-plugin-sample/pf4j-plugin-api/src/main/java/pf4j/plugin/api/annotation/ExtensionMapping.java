@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
  * 
  * @className	： ExtensionMapping
  * @description	：扩展点注解：用于某个功能扩展点的信息
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @date		： 2018年3月15日 下午5:55:10
  * @version 	V1.0
  */

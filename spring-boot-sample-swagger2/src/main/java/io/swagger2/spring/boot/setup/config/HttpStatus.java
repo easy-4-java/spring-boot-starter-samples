@@ -2,7 +2,7 @@ package io.swagger2.spring.boot.setup.config;
 
 /**
  * 标准Http状态码+自定义Http状态码
- * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 public interface HttpStatus {
 
