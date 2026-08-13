@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>io.github.hiwepy</groupId>
+    <groupId>io.github.easy4j</groupId>
     <artifactId>pf4j-plugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -185,14 +185,14 @@
                     <!-- 编译插件：编译主代码至主输出目录 -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.5.1</version> 
+                    <version>3.13.0</version> 
                     <!-- 设置源文件编码方式 -->  
                     <configuration>
                         <defaultLibBundleDir>lib</defaultLibBundleDir> 
                         <!-- 源代码编译版本 -->
-                        <source>1.7</source>
+                        <source>1.8</source>
                         <!-- 目标平台编译版本 -->
-                        <target>1.7</target>
+                        <target>1.8</target>
                         <!-- 字符集编码 -->
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <!--  -->
@@ -411,12 +411,11 @@
                  <groupId>org.apache.maven.plugins</groupId>
                  <artifactId>maven-source-plugin</artifactId>
             </plugin>
-            <!-- 文档插件:发布时自动生成文档     
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
-            <plugin>  
-                <!-- 文档插件:发布时自动生成文档 -->
-                <groupId>org.apache.maven.plugins</groupId>  
-                <artifactId>maven-javadoc-plugin</artifactId>  
+            <!-- 文档插件:发布时自动生成文档
+            https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
             </plugin>-->
             <!-- 安装插件：将项目输出构件安装到本地仓库 --> 
             <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->

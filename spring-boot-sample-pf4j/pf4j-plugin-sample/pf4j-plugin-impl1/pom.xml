@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>io.github.hiwepy</groupId>
+    <groupId>io.github.easy4j</groupId>
     <artifactId>pf4j-plugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
@@ -64,14 +64,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- 设置源文件编码方式 -->
                 <configuration>
-                    <annotationProcessors>
-                        <annotationProcessor>ro.fortsoft.pf4j.processor.ExtensionAnnotationProcessor</annotationProcessor>
-                    </annotationProcessors>
+                    <!-- ro.fortsoft.pf4j 1.3.0 的注解处理器与 JDK 9+ 不兼容，改为静态维护 META-INF/extensions.idx -->
+                    <proc>none</proc>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <!-- 源代码编译版本 -->
-                    <source>1.7</source>
+                    <source>1.8</source>
                     <!-- 目标平台编译版本 -->
-                    <target>1.7</target>
+                    <target>1.8</target>
                     <!-- 字符集编码 -->
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <!-- -->

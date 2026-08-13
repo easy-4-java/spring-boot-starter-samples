@@ -3,17 +3,6 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 
-        为了省去重复配置的麻烦，这里直接继承jeebiz-boot-parent
-        父级项目：https://github.com/Jeebiz/jeebiz-boot.git 
-    -->
-    <parent>
-        <groupId>net.jeebiz</groupId>
-        <artifactId>jeebiz-boot-parent</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
-        <relativePath></relativePath>
-    </parent>
-     
     <groupId>io.github.easy4j</groupId>
     <artifactId>spring-boot-starter-samples</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -22,26 +11,63 @@
     <name>Spring Boot Starter Samples</name>
     <description>Spring Boot Starter Samples</description>
 
-    <modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-boot.version>1.5.22.RELEASE</spring-boot.version>
+    </properties>
 
-        <module>spring-boot-sample-axis2</module>
-        <module>spring-boot-sample-casclient</module>
-        <module>spring-boot-sample-cxf</module>
-        <module>spring-boot-sample-disruptor</module>
-        <module>spring-boot-sample-druid</module>
-        <module>spring-boot-sample-ehcache3</module>
-        <module>spring-boot-sample-flyway</module>
-        <module>spring-boot-sample-hikaricp</module>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 替代已失效的 net.jeebiz:jeebiz-boot-parent 提供的版本管理：Spring Boot 1.5.x（Spring 4.3.x） -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <!-- 可从公共仓库解析依赖并通过构建的示例 -->
         <module>spring-boot-sample-jetbrick</module>
-        <module>spring-boot-sample-kaptcha</module>
-        <module>spring-boot-sample-log4j2</module>
-        <module>spring-boot-sample-pf4j</module>
-        <module>spring-boot-sample-rocketmq</module>
-        <module>spring-boot-sample-swagger2</module>
-        <module>spring-boot-sample-websocket</module>
         <module>spring-boot-sample-sharding-jdbc</module>
-        <module>spring-boot-sample-pf4j2</module>
-        <module>spring-boot-sample-socketio</module>
+        <module>spring-boot-sample-swagger2</module>
+        <!-- pf4j 插件示例子树（独立聚合器，含 Dependabot 安全告警修复目标） -->
+        <module>spring-boot-sample-pf4j/pf4j-plugin-sample</module>
+        <module>spring-boot-sample-pf4j2/pf4j2-plugin-sample</module>
     </modules>
-    
+
+    <!--
+        历史示例：依赖未发布到中央仓库的构件（io.github.hiwepy:* starter、
+        com.oracle:ojdbc6 等）或 pom 存在历史遗留问题，暂不参与默认构建。
+        启用方式：mvn -P legacy-samples clean verify
+    -->
+    <profiles>
+        <profile>
+            <id>legacy-samples</id>
+            <modules>
+                <module>spring-boot-sample-axis2</module>
+                <module>spring-boot-sample-casclient</module>
+                <module>spring-boot-sample-cxf</module>
+                <module>spring-boot-sample-disruptor</module>
+                <module>spring-boot-sample-druid</module>
+                <module>spring-boot-sample-ehcache3</module>
+                <module>spring-boot-sample-flyway</module>
+                <module>spring-boot-sample-hikaricp</module>
+                <module>spring-boot-sample-kaptcha</module>
+                <module>spring-boot-sample-log4j2</module>
+                <module>spring-boot-sample-pf4j</module>
+                <module>spring-boot-sample-pf4j2</module>
+                <module>spring-boot-sample-rocketmq</module>
+                <module>spring-boot-sample-socketio</module>
+                <module>spring-boot-sample-websocket</module>
+            </modules>
+        </profile>
+    </profiles>
+
 </project>

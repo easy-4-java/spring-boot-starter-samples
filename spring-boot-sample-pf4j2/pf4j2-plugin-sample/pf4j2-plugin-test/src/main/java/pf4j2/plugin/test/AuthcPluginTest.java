@@ -9,7 +9,6 @@ import org.pf4j.DefaultPluginManager;
 import org.pf4j.PluginManager;
 import org.pf4j.PluginWrapper;
 import org.pf4j.RuntimeMode;
-import org.pf4j.spring.boot.ext.Pf4jJarPluginManager;
 
 import pf4j2.plugin.api.AuthcExtensionPoint;
 import pf4j2.plugin.api.annotation.ExtensionMapping;
