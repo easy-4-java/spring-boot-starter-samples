@@ -15,10 +15,10 @@
  */
 package pf4j2.plugin.api.exception;
 
-import org.pf4j.PluginException;
+import org.pf4j.PluginRuntimeException;
 
 @SuppressWarnings("serial")
-public class PluginInvokeException extends PluginException{
+public class PluginInvokeException extends PluginRuntimeException{
 
 	private String pluginId;
 	
