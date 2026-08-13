@@ -39,13 +39,6 @@
         <!-- ###################### Spring 4.x 核心框架 ###################### -->
 
         <!-- Bean支持，包括Groovy -->
-        <!-- For Spring Web -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.pf4j/pf4j -->
         <dependency>
             <groupId>org.pf4j</groupId>
