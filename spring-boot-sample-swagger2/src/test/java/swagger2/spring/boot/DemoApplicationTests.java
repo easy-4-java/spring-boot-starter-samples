@@ -23,10 +23,10 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import io.github.swagger2markup.Swagger2MarkupConfig;
-import io.github.swagger2markup.Swagger2MarkupConverter;
-import io.github.swagger2markup.builder.Swagger2MarkupConfigBuilder;
-import io.github.swagger2markup.markup.builder.MarkupLanguage;
+// import io.github.swagger2markup.Swagger2MarkupConfig;
+// import io.github.swagger2markup.Swagger2MarkupConverter;
+// import io.github.swagger2markup.builder.Swagger2MarkupConfigBuilder;
+// import io.github.swagger2markup.markup.builder.MarkupLanguage;
 
 /**
  * TODO
@@ -37,83 +37,84 @@ import io.github.swagger2markup.markup.builder.MarkupLanguage;
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class DemoApplicationTests {
 
-	/**
-	 * 生成AsciiDoc的代码片段：
-	 * https://blog.csdn.net/qq_35873847/article/details/79191848
-	 */
-	//@Test
-	public void buildAsciiDoc() throws Exception {
+	// 以下 swagger2markup 演示方法依赖 docs profile 提供的构件，默认不参与编译
+	// 	/**
+	// 	 * 生成AsciiDoc的代码片段：
+	// 	 * https://blog.csdn.net/qq_35873847/article/details/79191848
+	// 	 */
+	// 	//@Test
+	// 	public void buildAsciiDoc() throws Exception {
 
-		// 输出Ascii格式
-		
-		/*
-		 * 
-		 * MarkupLanguage.ASCIIDOC：指定了要输出的最终格式。除了ASCIIDOC之外，还有MARKDOWN和CONFLUENCE_MARKUP
-		 * from(new URL("http://localhost:8080/v2/api-docs")：指定了生成静态部署文档的源头配置，可以是这样的URL形式，也可以是符合Swagger规范的String类型或者从文件中读取的流。如果是对当前使用的Swagger项目，我们通过使用访问本地Swagger接口的方式，如果是从外部获取的Swagger文档配置文件，就可以通过字符串或读文件的方式
-    	 * toFolder(Paths.get("src/docs/asciidoc/generated")：指定最终生成文件的具体目录位置
-		 * 
-		 */
+	// 		// 输出Ascii格式
 
-		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
+	// 		/*
+	// 		 * 
+	// 		 * MarkupLanguage.ASCIIDOC：指定了要输出的最终格式。除了ASCIIDOC之外，还有MARKDOWN和CONFLUENCE_MARKUP
+	// 		 * from(new URL("http://localhost:8080/v2/api-docs")：指定了生成静态部署文档的源头配置，可以是这样的URL形式，也可以是符合Swagger规范的String类型或者从文件中读取的流。如果是对当前使用的Swagger项目，我们通过使用访问本地Swagger接口的方式，如果是从外部获取的Swagger文档配置文件，就可以通过字符串或读文件的方式
+	//     	 * toFolder(Paths.get("src/docs/asciidoc/generated")：指定最终生成文件的具体目录位置
+	// 		 * 
+	// 		 */
 
-				.withMarkupLanguage(MarkupLanguage.ASCIIDOC)
+	// 		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
 
-				.build();
+	// 				.withMarkupLanguage(MarkupLanguage.ASCIIDOC)
 
-		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
+	// 				.build();
 
-				.withConfig(config)
+	// 		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
 
-				.build()
+	// 				.withConfig(config)
 
-				.toFolder(Paths.get("src/docs/asciidoc/generated"));
+	// 				.build()
 
-	}
+	// 				.toFolder(Paths.get("src/docs/asciidoc/generated"));
 
-	/**
-	 * 生成confluence的代码片段：
-	 * https://blog.csdn.net/qq_35873847/article/details/79191971
-	 */
-	//@Test
-	public void buildMarkdown() throws Exception {
+	// 	}
 
-		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
+	// 	/**
+	// 	 * 生成confluence的代码片段：
+	// 	 * https://blog.csdn.net/qq_35873847/article/details/79191971
+	// 	 */
+	// 	//@Test
+	// 	public void buildMarkdown() throws Exception {
 
-				.withMarkupLanguage(MarkupLanguage.MARKDOWN)
+	// 		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
 
-				.build();
+	// 				.withMarkupLanguage(MarkupLanguage.MARKDOWN)
 
-		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
+	// 				.build();
 
-				.withConfig(config)
+	// 		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
 
-				.build()
+	// 				.withConfig(config)
 
-				.toFolder(Paths.get("src/docs/confluence/generated"));
+	// 				.build()
 
-	}
-	
-	/**
-	 * 生成confluence的代码片段：
-	 * https://blog.csdn.net/qq_35873847/article/details/79191971
-	 */
-	//@Test
-	public void buildConfluence() throws Exception {
+	// 				.toFolder(Paths.get("src/docs/confluence/generated"));
 
-		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
+	// 	}
 
-				.withMarkupLanguage(MarkupLanguage.CONFLUENCE_MARKUP)
+	// 	/**
+	// 	 * 生成confluence的代码片段：
+	// 	 * https://blog.csdn.net/qq_35873847/article/details/79191971
+	// 	 */
+	// 	//@Test
+	// 	public void buildConfluence() throws Exception {
 
-				.build();
+	// 		Swagger2MarkupConfig config = new Swagger2MarkupConfigBuilder()
 
-		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
+	// 				.withMarkupLanguage(MarkupLanguage.CONFLUENCE_MARKUP)
 
-				.withConfig(config)
+	// 				.build();
 
-				.build()
+	// 		Swagger2MarkupConverter.from(new URL("http://localhost:8080/v2/api-docs"))
 
-				.toFolder(Paths.get("src/docs/confluence/generated"));
+	// 				.withConfig(config)
 
-	}
+	// 				.build()
+
+	// 				.toFolder(Paths.get("src/docs/confluence/generated"));
+
+	// 	}
 
 }
