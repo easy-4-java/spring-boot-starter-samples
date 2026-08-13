@@ -23,7 +23,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <fastjson.version>1.2.61</fastjson.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
-        <pf4j.version>2.2.0</pf4j.version>
+        <pf4j.version>3.14.1</pf4j.version>
         <pf4j-update.version>2.0.0</pf4j-update.version>
         <pf4j-spring.version>0.4.0</pf4j-spring.version>
         <slf4j.version>1.7.21</slf4j.version>
