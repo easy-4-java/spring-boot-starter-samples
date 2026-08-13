@@ -116,13 +116,6 @@
             <artifactId>swagger-spring-boot-starter</artifactId>
             <version>${spring-boot-starter-swagger.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.github.swagger2markup/swagger2markup -->
-        <dependency>
-            <groupId>io.github.swagger2markup</groupId>
-            <artifactId>swagger2markup</artifactId>
-            <version>${swagger2markup.version}</version>
-        </dependency>
-         
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -292,6 +285,27 @@
                 <artifactId>docker-maven-plugin</artifactId> </plugin> -->
             
             
+        </plugins>
+    </build>
+
+    <!-- 启用 API 文档生成：需先启动应用（提供 /v2/api-docs），再执行 mvn -P docs package -->
+    <profiles>
+        <profile>
+            <id>docs</id>
+            <properties>
+                <swagger2markup.skip>false</swagger2markup.skip>
+                <asciidoctor.skip>false</asciidoctor.skip>
+            </properties>
+            <dependencies>
+                <!-- swagger2markup 及其传递依赖（markdown_to_asciidoc 等）仅文档生成时需要 -->
+                <dependency>
+                    <groupId>io.github.swagger2markup</groupId>
+                    <artifactId>swagger2markup</artifactId>
+                    <version>${swagger2markup.version}</version>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
             <!-- 
                 https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=2247484764&idx=1&sn=10e4fcae5333687368960a2e64b2b70c&chksm=9bd0a8c4aca721d264e40f5f543b9f557eedf033719a97a38257835c5162ffa010c025580a65&scene=21#wechat_redirect
                 https://github.com/tianqing2117/swagger-doc-demo/blob/master/pom.xml
@@ -422,17 +436,8 @@
                     </execution> -->
                 </executions>
             </plugin> 
-        </plugins>
-    </build>
-
-    <!-- 启用 API 文档生成：需先启动应用（提供 /v2/api-docs），再执行 mvn -P docs package -->
-    <profiles>
-        <profile>
-            <id>docs</id>
-            <properties>
-                <swagger2markup.skip>false</swagger2markup.skip>
-                <asciidoctor.skip>false</asciidoctor.skip>
-            </properties>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
