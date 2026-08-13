@@ -16,7 +16,7 @@
 package pf4j.plugin.impl;
 
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import pf4j.plugin.api.annotation.PluginMapping;
 import ro.fortsoft.pf4j.Plugin;

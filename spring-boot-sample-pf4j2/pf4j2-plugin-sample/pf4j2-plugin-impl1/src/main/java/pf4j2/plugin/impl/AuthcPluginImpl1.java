@@ -16,7 +16,7 @@
 package pf4j2.plugin.impl;
 
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
 import org.pf4j.RuntimeMode;
