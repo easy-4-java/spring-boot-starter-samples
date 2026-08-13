@@ -19,25 +19,25 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.pf4j.PluginException;
+import org.pf4j.PluginRuntimeException;
 
 public class AuthcExtensionPointAdepter implements AuthcExtensionPoint{
 
 	@Override
-	public String getToken(Map<String, Object> par, HttpServletRequest req) throws PluginException{
+	public String getToken(Map<String, Object> par, HttpServletRequest req) throws PluginRuntimeException{
 		return null;
 	}
 
 	@Override
-	public void handleHeaderParams(Map<String, Object> par, HttpServletRequest req) throws PluginException {
+	public void handleHeaderParams(Map<String, Object> par, HttpServletRequest req) throws PluginRuntimeException {
 	}
 
 	@Override
-	public void handleRequestParams(Map<String, Object> par, HttpServletRequest req) throws PluginException {
+	public void handleRequestParams(Map<String, Object> par, HttpServletRequest req) throws PluginRuntimeException {
 	}
 
 	@Override
-	public Object handleResult(Object res) throws PluginException {
+	public Object handleResult(Object res) throws PluginRuntimeException {
 		return res;
 	}
 
