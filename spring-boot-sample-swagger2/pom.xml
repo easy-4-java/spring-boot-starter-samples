@@ -20,7 +20,7 @@
         <swagger-play.version >1.6.0</swagger-play.version >
         <swagger-inflector.version>1.0.14</swagger-inflector.version>
         <swagger-validator.version>1.0.5</swagger-validator.version>
-        <springfox.version>2.8.0</springfox.version>
+        <springfox.version>2.10.0</springfox.version>
         
         <swagger2markup.version>1.3.2</swagger2markup.version>
         <swagger2markup.plugin.version>1.3.4</swagger2markup.plugin.version>
