@@ -27,7 +27,6 @@
         <ro.pf4j-update.version>0.4.0</ro.pf4j-update.version>
         <ro.pf4j-spring.version>0.3.2</ro.pf4j-spring.version>
         <slf4j.version>1.7.21</slf4j.version>
-        <spring.version>4.3.6.RELEASE</spring.version><!-- 4.3.x（JDK 1.7 ）、4.1.x（JDK 1.6）、4.0.x（JDK 1.6） -->
     </properties>
 
     <dependencyManagement>
@@ -116,62 +115,13 @@
             <!-- ###################### Spring 4.x 核心框架  ###################### -->
             
             <!-- 基于代理的AOP支持 -->
-            <!-- For Spring Aop -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- 基于AspectJ的切面 -->
-            <!-- For Spring Aspects -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aspects</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- Bean支持，包括Groovy  -->
-            <!-- For Spring Beans -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-beans</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- 应用程序的运行时环境，包括调度和远程处理的抽象 -->
-            <!-- For Spring Context -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- 用于把常用的第三方 类库集成到Spring的应用环境中的支持类 -->
-            <!-- For Spring Context-Support -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- 被大多数其他Spring模块使用的核心工具类 -->
-            <!-- For Spring Core -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- Web支持包，包括客户端和web的远程访问 -->
-            <!-- For Spring Web -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
             <!-- REST的web服务和用于web应用程序的mvc实现 -->
-            <!-- For Spring Webmvc -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            
         </dependencies>
     </dependencyManagement>
     
