@@ -25,8 +25,9 @@
 
         <!-- https://mvnrepository.com/artifact/ro.fortsoft.pf4j -->
         <dependency>
-            <groupId>ro.fortsoft.pf4j</groupId>
+            <groupId>org.pf4j</groupId>
             <artifactId>pf4j</artifactId>
+            <version>3.14.1</version>
         </dependency>
 
     </dependencies>
