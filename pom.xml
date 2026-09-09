@@ -20,27 +20,27 @@
     <name>Spring Boot Starter Samples</name>
     <description>Spring Boot Starter Samples</description>
 
-    <modules>
+    <subprojects>
 
-        <module>spring-boot-sample-axis2</module>
-        <module>spring-boot-sample-casclient</module>
-        <module>spring-boot-sample-cxf</module>
-        <module>spring-boot-sample-disruptor</module>
-        <module>spring-boot-sample-druid</module>
-        <module>spring-boot-sample-ehcache3</module>
-        <module>spring-boot-sample-flyway</module>
-        <module>spring-boot-sample-hikaricp</module>
-        <module>spring-boot-sample-jetbrick</module>
-        <module>spring-boot-sample-kaptcha</module>
-        <module>spring-boot-sample-log4j2</module>
-        <module>spring-boot-sample-pf4j</module>
-        <module>spring-boot-sample-rocketmq</module>
-        <module>spring-boot-sample-swagger2</module>
-        <module>spring-boot-sample-websocket</module>
-        <module>spring-boot-sample-sharding-jdbc</module>
-        <module>spring-boot-sample-pf4j2</module>
-        <module>spring-boot-sample-socketio</module>
-    </modules>
+        <subproject>spring-boot-sample-axis2</subproject>
+        <subproject>spring-boot-sample-casclient</subproject>
+        <subproject>spring-boot-sample-cxf</subproject>
+        <subproject>spring-boot-sample-disruptor</subproject>
+        <subproject>spring-boot-sample-druid</subproject>
+        <subproject>spring-boot-sample-ehcache3</subproject>
+        <subproject>spring-boot-sample-flyway</subproject>
+        <subproject>spring-boot-sample-hikaricp</subproject>
+        <subproject>spring-boot-sample-jetbrick</subproject>
+        <subproject>spring-boot-sample-kaptcha</subproject>
+        <subproject>spring-boot-sample-log4j2</subproject>
+        <subproject>spring-boot-sample-pf4j</subproject>
+        <subproject>spring-boot-sample-rocketmq</subproject>
+        <subproject>spring-boot-sample-swagger2</subproject>
+        <subproject>spring-boot-sample-websocket</subproject>
+        <subproject>spring-boot-sample-sharding-jdbc</subproject>
+        <subproject>spring-boot-sample-pf4j2</subproject>
+        <subproject>spring-boot-sample-socketio</subproject>
+    </subprojects>
 
     <!-- 制品发布仓库配置（distributionManagement） -->
     <distributionManagement>
