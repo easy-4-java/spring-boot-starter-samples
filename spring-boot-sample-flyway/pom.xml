@@ -2,9 +2,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.hiwepy</groupId>
+        <groupId>io.github.easy4j</groupId>
         <artifactId>spring-boot-starter-samples</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>3.0.x.20260630-SNAPSHOT</version>
     </parent>
     
     <artifactId>spring-boot-sample-mybatis</artifactId>
@@ -37,24 +37,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.ruijc/spring-boot-starter-mybatis -->
-        <dependency>
-            <groupId>com.ruijc</groupId>
-            <artifactId>spring-boot-starter-mybatis</artifactId>
-            <version>${spring-boot-starter-mybatis.version}</version>
-        </dependency>
-        
-        <!-- <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>spring-boot-starter-mybatis</artifactId>
-            <version>${project.version}</version>
-        </dependency> -->
-
         <!-- Spring Boot Mybatis 依赖 -->
         <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.3.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
@@ -71,32 +59,15 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
         </dependency>
-        <!-- For Oracle 11g -->
-        <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <scope>runtime</scope>
-        </dependency>
         <!-- For MySQL -->
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
 
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.ruijc</groupId>
-                <artifactId>spring-boot-starter-mybatis</artifactId>
-                <version>${spring-boot-starter-mybatis.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 
     <build>

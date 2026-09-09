@@ -2,9 +2,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.hiwepy</groupId>
+        <groupId>io.github.easy4j</groupId>
         <artifactId>spring-boot-starter-samples</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>3.0.x.20260630-SNAPSHOT</version>
     </parent>
     
     <artifactId>spring-boot-sample-swagger2</artifactId>
@@ -83,26 +83,31 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-spring-web -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-spring-web</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-bean-validators -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-bean-validators</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-data-rest -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-data-rest</artifactId>
+            <version>${springfox.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-spi -->
         <dependency>
@@ -147,6 +152,7 @@
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-core</artifactId>
+            <version>${swagger.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.swagger/swagger-parser -->
         <dependency>
@@ -179,13 +185,13 @@
             <artifactId>swagger-jersey-jaxrs</artifactId>
             <version>${swagger.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-jersey2-jaxrs -->
+        https://mvnrepository.com/artifact/io.swagger/swagger-jersey2-jaxrs
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-jersey2-jaxrs</artifactId>
             <version>${swagger.version}</version>
-        </dependency> 
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-inflector -->
+        </dependency>
+        https://mvnrepository.com/artifact/io.swagger/swagger-inflector
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-inflector</artifactId>
@@ -234,13 +240,13 @@
                 </configuration>
             </plugin>
             <!-- 第一步：生成可执行的启动脚本
-            <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/appassembler-maven-plugin -->
+            https://mvnrepository.com/artifact/org.codehaus.mojo/appassembler-maven-plugin
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>appassembler-maven-plugin</artifactId>
             </plugin> -->
             <!-- 第一步：通过antrun插件拷贝文件
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-antrun-plugin -->
+            https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-antrun-plugin
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>

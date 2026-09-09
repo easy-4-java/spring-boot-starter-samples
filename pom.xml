@@ -6,9 +6,9 @@
 
     
     <parent>
-        <groupId>net.jeebiz</groupId>
-        <artifactId>jeebiz-boot-parent</artifactId>
-        <version>3.0.x.20260630-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>
         <relativePath />
     </parent>
      
@@ -23,9 +23,6 @@
     <subprojects>
 
         <subproject>spring-boot-sample-axis2</subproject>
-        <subproject>spring-boot-sample-casclient</subproject>
-        <subproject>spring-boot-sample-cxf</subproject>
-        <subproject>spring-boot-sample-disruptor</subproject>
         <subproject>spring-boot-sample-druid</subproject>
         <subproject>spring-boot-sample-ehcache3</subproject>
         <subproject>spring-boot-sample-flyway</subproject>
@@ -34,12 +31,9 @@
         <subproject>spring-boot-sample-kaptcha</subproject>
         <subproject>spring-boot-sample-log4j2</subproject>
         <subproject>spring-boot-sample-pf4j</subproject>
-        <subproject>spring-boot-sample-rocketmq</subproject>
         <subproject>spring-boot-sample-swagger2</subproject>
-        <subproject>spring-boot-sample-websocket</subproject>
         <subproject>spring-boot-sample-sharding-jdbc</subproject>
         <subproject>spring-boot-sample-pf4j2</subproject>
-        <subproject>spring-boot-sample-socketio</subproject>
     </subprojects>
 
     <!-- 制品发布仓库配置（distributionManagement） -->
@@ -60,5 +54,23 @@
         <maven.version>3.9.16</maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- 示例子模块中声明但未指定版本的插件，统一在插件管理中补全版本 -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>appassembler-maven-plugin</artifactId>
+                    <version>1.10</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
